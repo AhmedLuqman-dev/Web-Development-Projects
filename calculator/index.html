@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Calculator | Mohd Ahmed Luqman</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="calculator" role="region" aria-label="Simple calculator">
+  <div class="display" id="display" aria-live="polite" aria-atomic="true">0</div>
+  <div class="buttons">
+    <button class="clear" id="clear">C</button>
+    <button class="operator" data-op="/">÷</button>
+    <button class="operator" data-op="*">×</button>
+    <button class="operator" data-op="-">−</button>
+
+    <button data-num="7">7</button>
+    <button data-num="8">8</button>
+    <button data-num="9">9</button>
+    <button class="operator" data-op="+">+</button>
+
+    <button data-num="4">4</button>
+    <button data-num="5">5</button>
+    <button data-num="6">6</button>
+    <button data-num="0" style="visibility:hidden;">0</button>
+
+    <button data-num="1">1</button>
+    <button data-num="2">2</button>
+    <button data-num="3">3</button>
+    <button class="equals" id="equals">=</button>
+
+    <button data-num="0">0</button>
+    <button data-num=".">.</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
