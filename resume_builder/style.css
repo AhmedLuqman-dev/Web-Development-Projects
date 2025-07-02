@@ -1,1 +1,173 @@
-<style content omitted for brevity></style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f0f4ff, #e3e7ff);
+  padding: 40px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+form, #resume-preview {
+  flex: 1 1 500px;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9ff);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0, 0, 50, 0.1);
+  transition: transform 0.3s ease;
+}
+
+form:hover, #resume-preview:hover {
+  transform: scale(1.01);
+}
+
+form h2, #resume-preview h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #4a4e69;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #6c63ff, #9d94ff);
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(to right, #554cff, #837aff);
+}
+
+#education-section h3,
+#skills-section h3,
+#experience-section h3,
+#certificates-section h3,
+#projects-section h3 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+#skills-section label {
+  display: inline-block;
+  background: #e0e0ff;
+  color: #4a4e69;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#skills-section input[type="checkbox"] {
+  display: none;
+}
+
+#skills-section input[type="checkbox"]:checked + label {
+  background: #6c63ff;
+  color: white;
+}
+
+#resume-preview {
+  animation: fadeIn 0.6s ease-in;
+  font-size: 16px;
+}
+
+#resume-preview p,
+#resume-preview ul {
+  margin: 10px 0;
+}
+
+#resume-preview ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+#resume-preview strong {
+  color: #4a4e69;
+}
+
+#resume-preview h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #2e2b59;
+  border-bottom: 2px solid #d8d6f0;
+  padding-bottom: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.download-btn {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.download-btn:hover {
+  background: linear-gradient(to right, #f76b1c, #fad961);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  form, #resume-preview {
+    width: 100%;
+  }
+
+  input, textarea {
+    font-size: 16px;
+  }
+
+  #resume-preview {
+    font-size: 15px;
+  }
+}
